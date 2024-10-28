@@ -1,4 +1,4 @@
-function Seo({ title, description }) {
+function Seo({ title = 'Hola, React 19', description = 'Hola, React 19' }) {
   return (
     <>
       <title>{title}</title>
