@@ -1,16 +1,20 @@
 import { version } from 'react'
 import reactLogo from './assets/react.svg'
 import './App.css'
+import Seo from './components/Seo'
 
 function App() {
   return (
     <>
+      <Seo title='Hola, React 19' description='Hola, React 19' />
       <title>{`Hola React 19 ${version}`}</title>
-      <link rel='author' href='https://google.com' />
+      <meta name='description' content='Hola, React 19' />
       <link
         rel='stylesheet'
         href='https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css'
       />
+
+      <AnotherComponent />
 
       <div>
         <img src={reactLogo} className='logo react' alt='React logo' />
@@ -21,6 +25,10 @@ function App() {
       </div>
     </>
   )
+}
+
+function AnotherComponent() {
+  return <Seo title='Hola, hola!' description='Otra descripcion' />
 }
 
 export default App
