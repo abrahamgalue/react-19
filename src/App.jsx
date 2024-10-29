@@ -1,14 +1,11 @@
 import { version } from 'react'
 import './App.css'
 import Seo from './components/Seo'
-import { useState } from 'react'
 import Form from './components/Form'
 import { preload } from 'react-dom'
 import Logo from './components/Logo'
 
 function App() {
-  const [show, setShow] = useState(false)
-
   preload('https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css', {
     as: 'style',
     priority: 'low',
@@ -29,9 +26,7 @@ function App() {
         </small>
       </div>
 
-      <button onClick={() => setShow(!show)}>Toggle</button>
-
-      {show && <Form />}
+      <Form />
     </>
   )
 }
