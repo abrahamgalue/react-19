@@ -1,9 +1,10 @@
 import { version } from 'react'
 import './App.css'
 import Seo from './components/Seo'
-import Form from './components/Form'
+// import Form from './components/Form'
 import { preload } from 'react-dom'
 import Logo from './components/Logo'
+import { UseFetchExample } from './clase/useExample'
 
 function App() {
   preload('https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css', {
@@ -26,7 +27,7 @@ function App() {
         </small>
       </div>
 
-      <Form />
+      <UseFetchExample />
     </>
   )
 }
