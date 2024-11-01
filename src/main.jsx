@@ -1,14 +1,13 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import { renderToString } from 'react-dom/server'
 import './index.css'
 import App from './App.jsx'
+import { UserContextProvider } from './context/user'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <App />
+    <UserContextProvider>
+      <App />
+    </UserContextProvider>
   </StrictMode>
 )
-
-// Next.js, Remix y otros...
-console.log(renderToString(<App />))
