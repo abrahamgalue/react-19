@@ -1,14 +1,11 @@
-import { version, use } from 'react'
+import { version } from 'react'
 import './App.css'
 import Seo from './components/Seo'
 import { preload } from 'react-dom'
 import Logo from './components/Logo'
-import { UseContextExample } from './clase/UseContextExample'
-import { UserContext } from './context/user'
+import { ActionsExample } from './clase/Actions'
 
 function App() {
-  const { isLogged } = use(UserContext)
-
   preload('https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css', {
     as: 'style',
     priority: 'low',
@@ -29,11 +26,7 @@ function App() {
         </small>
       </div>
 
-      <UseContextExample />
-
-      <footer style={{ position: 'fixed', bottom: 0 }}>
-        {isLogged ? 'Estas logeado' : 'No estas logeado'}
-      </footer>
+      <ActionsExample />
     </>
   )
 }
