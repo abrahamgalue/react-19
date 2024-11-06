@@ -3,7 +3,7 @@ import './App.css'
 import Seo from './components/Seo'
 import { preload } from 'react-dom'
 import Logo from './components/Logo'
-import { ActionsExample } from './clase/Actions'
+import { UseOptimisticExample } from './clase/UseOptimisticExample'
 
 function App() {
   preload('https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css', {
@@ -26,7 +26,7 @@ function App() {
         </small>
       </div>
 
-      <ActionsExample />
+      <UseOptimisticExample />
     </>
   )
 }
